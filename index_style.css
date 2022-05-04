@@ -10,6 +10,8 @@ html, body{
 	font-family: 'Kameron', sans-serif;
 }
 
+
+
 /* navbar */
 .logo img{
 	height: 20vh;
@@ -17,7 +19,7 @@ html, body{
 
 .navbar{
 	background-color: transparent;
-	padding: 30px 0;
+	padding: 20px 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -25,17 +27,14 @@ html, body{
 }
 
 .navbar-nav{
-	background-color: #cbcbcb;
+	background-color: #4b5563;
 }
 
-.nav-item{
-	margin: 0 15px;
-}
-
-.nav-item .nav-link{
+.nav-item a{
 	font-size: 1rem;
 	font-weight: 500;
 	color: white !important;
+	margin: 5px 0;
 }
 
 .nav-item .nav-link:hover{
@@ -47,17 +46,23 @@ html, body{
 	color: white;
 	border-radius: 40px;
 	padding: 5px 25px;
+	margin-top: 5px;
 }
 
 .login-btn:hover{
 	background-color: #fcd34d;
 }
 
+.btn:focus {
+	outline: none;
+	box-shadow: none;
+	}
+
 .scroll_navbar{
 	padding: 10px 0;
 	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
 	transition-duration: 0.6s;
-	background-color: #cbcbcb !important;
+	background-color: #4b5563 !important;
 }
 
 .scroll_logo{
@@ -65,20 +70,29 @@ html, body{
 	transition-duration: 0.6s;
 }
 
-/*menu bar*/
-.navbar-toggler{
-	border: none;
-	outline: none;
+.scroll_nav-link{
+	color: white !important;
 }
 
-.navbar-toggler:focus{
+/*menu bar*/
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
 	border: none;
-	outline: none;
+}
+
+
+/* hero page */
+.hero-page{
+	position: relative;
 }
 
 /*carousel*/
 .carousel-item {
-	transition: transform 3s ease-in-out;
+	transition: transform 3s ease-out;
 	position: relative;
 }
 
@@ -90,7 +104,7 @@ html, body{
 .carousel-caption{
 	position: absolute;
     left: 50%;
-    top: 50%;
+    top: 60%;
     transform: translate(-50%,-50%);
 }
 
@@ -136,17 +150,392 @@ html, body{
 	color: black;
 }
 
-/*second-page*/
-.second-page{
-	height: 100vh;
+/*three logos-page*/
+.logo-box{
+	height: 20vh;
+}
+.logo-images{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo-images img{
+	height: 5vh;
+}
+
+/*images page*/
+.third-page{
+	height: auto;
+	padding-bottom: 30px;
+}
+
+.photo img{
+	height: 20vh;
+	width: 100%;
 }
 
 
+/* banner */
+.banner{
+	height: auto;
+	width: 100%;
+	background-color: #4b5563;
+}
 
+.banner-inner{
+	color: white;
+	text-align: center;
+	padding: 10px 0;
+	font-size: 0.8rem;
+}
+
+/* St. Peter */
+.fourth-page{
+	height: auto;
+	background-image: url('/img/bg-casket.jpg'); 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	padding: 50px 0;
+}
+
+.st-peter{
+	height: auto;
+}
+
+.st-peter h3{
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-align: center;
+}
+
+.st-peter ol{
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 65vh;
+}
+
+.st-peter ol li{
+	font-size: 1rem;
+}
+
+.st-peter .st-peter-logo{
+	height: auto;
+	width: 100%;
+	padding: 20px 0 40px 0;
+	text-align: center;
+}
+
+.st-peter-logo img{
+	height: 10vh;
+	max-width: 100%;
+}
+
+.st-peter .st-peter-ul-list p{
+	font-size: 1rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.st-peter-ul-list .outer{
+	font-size: 1rem;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	flex-direction: column;
+	height: 90vh;
+	padding: 0 35px;
+}
+
+/* PhilCare */
+.fifth-page{
+	height: auto;
+}
+
+.philcare{
+	height: auto;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.philcare .philcare-logo{
+	height: auto;
+	width: 100%;
+	padding: 20px 0 40px 0;
+	text-align: center;
+}
+
+.philcare-logo img{
+	height: 10vh;
+	max-width: 100%;
+}
+
+.philcare-card{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.philcare-list{
+	padding: 30px 0;
+	height: auto;
+	width: 100%;
+}
+
+.philcare-banner{
+	background-color: #e73942;
+	width: 100%;
+	color: #f3f4f6;
+	font-size: 0.9rem;
+	font-weight: 600;
+	padding: 10px 0;
+}
+
+.philcare-text{
+	font-size: 0.9rem;
+	padding: 10px 0;
+}
+
+.philcare-text p{
+	text-decoration: underline;
+	font-size: 0.9rem;
+}
+
+.philcare-text small{
+	text-decoration: underline;
+	font-size: 0.9rem;
+}
+
+.philcare-text ol li{
+	margin-bottom: 10px;
+}
+
+.philcare-text .italic{
+	font-size: 0.85rem;
+	font-style: italic;
+	text-decoration: none;
+}
+
+.philcare-text .important-notes{
+	font-weight: 700;
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.philcare-text .important-list{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	font-size: 1rem;
+}
+
+.important-list p{
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+.important-list .important-list-highlight{
+	color: #f59e0b;
+	text-decoration: none;
+}
+
+/* Standard Insurance */
+.sixth-page{
+	height: auto;
+	background-image: url('/img/wheelchair.jpg'); 
+	background-repeat: no-repeat; 
+	background-size: contain;
+	padding: 0 0 50px 0;
+}
+
+.standard-insurance{
+	height: auto;
+}
+
+.standard-insurance .standard-insurance-logo{
+	height: auto;
+	width: 100%;
+	padding: 20px 0 40px 0;
+	text-align: center;
+}
+
+.standard-insurance-logo img{
+	height: 10vh;
+	max-width: 100%;
+}
+
+.standard-insurance .standard-insurance-ul-list{
+	width: 100%;
+}
+
+.standard-insurance .standard-insurance-ul-list p{
+	font-size: 0.9rem;
+	font-weight: 500;
+}
+
+/*table */
+table{
+	width: 100%;
+	height: auto;
+}
+
+.table-bordered{
+	border: 1px solid #f59e0b;
+}
+
+thead{
+	background-color: #f59e0b;
+	color: white;
+	font-size: 0.9rem;
+	width: 100%;
+}
+
+tbody{
+	background-color: white;
+	width: 100%;
+}
+
+tr th{
+	width: 100vw;
+}
+
+td{
+	font-size: 0.9rem;
+	color: black;
+}
+
+/* Standard Insurance */
+.seventh-page{
+	height: auto;
+	background-image: url('/img/family.jpg'); 
+	background-repeat: no-repeat; 
+	background-size: contain;
+	height: 40vh;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+}
+
+.for-overlay{
+	position: absolute;
+	inset: 0;
+	background-color: white;
+	opacity: 30%;
+	z-index: 1;
+}
+
+.for-overlay-up{
+	position: absolute;
+	z-index: 2;
+}
+
+.insure{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.insure p{
+	font-size: 1rem;
+	text-align: center;
+	font-weight: 900;
+}
+
+.insure p small{
+	color: #f59e0b;
+	text-shadow: #4b5563;
+}
+
+.insure button{
+	background-color: #fcd34d;
+	color: black;
+	font-size: 0.9rem;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: none;
+	outline: none;
+	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.insure button:hover{
+	background-color: #f59e0b;
+	color: white;
+	box-shadow: none;
+	transition: all 0.2s ease-in;
+}
+
+/* Footer */
+.footer{
+	height: auto;
+	width: 100%;
+}
+
+.footer-inner{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 50px 0;
+
+	position: relative;
+}
+
+.footer-inner img{
+	height: 25vh;
+	
+}
+
+.icon-links{
+	position: absolute;
+	right: 0.5rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+
+	height: 35vh;
+}
+
+.fab, .fas{
+	font-size: 1rem;
+	color: #4b5563;
+	cursor: pointer;
+}
+
+.fab:hover, .fas:hover{
+	color: #fcd34d;
+	transition: all 0.4s;
+	transform: translateY(-10px)
+}
+
+/* footer banner */
+.footer-banner{
+	width: 100%;
+	height: auto;
+	background-color: #4b5563;
+	text-align: center;
+}
+
+.footer-banner-inner{
+	font-size: 0.85rem;
+	color: white;
+	padding: 12px 0;
+}
+
+
+/*************** mobile size *****************/
 @media (min-width: 576px) {
-	.navbar-nav{
-		background-color: transparent;
-	}
 
 	.carousel-caption figcaption h2{
 		font-size: 5rem;
@@ -166,15 +555,200 @@ html, body{
 	.carousel-caption{
 		position: absolute;
     	left: 50%;
-    	top: 50%;
+    	top: 55%;
     	transform: translate(-50%,-50%);
 	}
+	.logo-box{
+		height: 20vh;
+	}
+	.logo-images img{
+		height: 8vh;
+	}
+
+	.photo img{
+		height: 30vh;
+		width: 100%;
+	}
+
+	/* banner */
+.banner-inner{
+	padding: 10px 0;
+	font-size: 1rem;
 }
 
+/* St. Peter */
+.fourth-page{
+	padding: 50px 0;
+}
+
+.st-peter h3{
+	font-size: 1.2rem;
+}
+
+.st-peter ol{
+	height: 65vh;
+}
+
+.st-peter ol li{
+	font-size: 1rem;
+}
+
+.st-peter .st-peter-logo{
+	padding: 20px 0 40px 0;
+}
+
+.st-peter-logo img{
+	height: 15vh;
+}
+
+.st-peter .st-peter-ul-list p{
+	font-size: 1rem;
+}
+
+.st-peter-ul-list .outer{
+	font-size: 1rem;
+	height: 90vh;
+	padding: 0 35px;
+}
+
+/* PhilCare */
+.philcare .philcare-logo{
+	padding: 20px 0 40px 0;
+}
+
+.philcare-logo img{
+	height: 15vh;
+	max-width: 100%;
+}
+
+.philcare-list{
+	padding: 30px 0;
+}
+
+.philcare-banner{
+	font-size: 1rem;
+}
+
+.philcare-text{
+	font-size: 1rem;
+}
+
+.philcare-text p{
+	font-size: 1rem;
+}
+
+.philcare-text small{
+	text-decoration: underline;
+	font-size: 1rem;
+}
+
+.philcare-text ol li{
+	margin-bottom: 10px;
+}
+
+.philcare-text .italic{
+	font-size: 0.85rem;
+}
+
+.philcare-text .important-notes{
+	font-size: 1rem;
+}
+
+.philcare-text .important-list{
+	font-size: 1rem;
+}
+
+.important-list p{
+	font-size: 1rem;
+}
+
+/* Standard Insurance */
+.sixth-page{
+	background-size: contain;
+	padding: 25px 0;
+}
+
+.standard-insurance .standard-insurance-logo{
+	padding: 20px 0 40px 0;
+}
+
+.standard-insurance-logo img{
+	height: 15vh;
+	max-width: 100%;
+}
+
+.standard-insurance .standard-insurance-ul-list p{
+	font-size: 1rem;
+}
+
+/*table */
+thead{
+	font-size: 1rem;
+}
+
+
+tr th{
+	width: 100vw;
+}
+
+td{
+	font-size: 1rem;
+}
+
+/* Standard Insurance */
+.seventh-page{
+	background-size: cover;
+	height: 50vh;
+}
+
+.insure p{
+	font-size: 1.5rem;
+}
+
+.insure button{
+	font-size: 1rem;
+	padding: 10px 25px;
+}
+
+/* Footer */
+.footer-inner{
+	padding: 50px 0;
+	position: relative;
+}
+
+.footer-inner img{
+	height: 30vh;
+}
+
+.icon-links{
+	right: 0.5rem;
+	height: 35vh;
+}
+
+.fab, .fas{
+	font-size: 1rem;
+	color: #4b5563;
+	cursor: pointer;
+}
+
+.fab:hover, .fas:hover{
+	color: #fcd34d;
+	transition: all 0.4s;
+	transform: translateY(-10px)
+}
+
+/* footer banner */
+.footer-banner-inner{
+	font-size: 0.9rem;
+	color: white;
+	padding: 12px 0;
+}
+
+}
+
+
+/*************** tablet size *****************/
 @media (min-width: 768px) {
-	.navbar-nav{
-		background-color: transparent;
-	}
 	.carousel-item img{
 		height: 100vh;
 	}
@@ -194,15 +768,197 @@ html, body{
 	.carousel-caption{
 		position: absolute;
     	left: 50%;
-    	top: 50%;
+    	top: 55%;
     	transform: translate(-50%,-50%);
 	}
+
+	.logo-box{
+		height: auto;
+		padding: 50px 0;
+	}
+	.logo-images img{
+		height: 10vh;
+	}
+
+	.photo img{
+		height: 40vh;
+		width: 100%;
+	}
+
+	/* banner */
+.banner-inner{
+	padding: 10px 0;
+	font-size: 1.2rem;
 }
 
+/* St. Peter */
+.fourth-page{
+	padding: 50px 0;
+}
+
+.st-peter h3{
+	font-size: 1.5rem;
+}
+
+.st-peter ol{
+	height: 75vh;
+}
+
+.st-peter ol li{
+	font-size: 1.2rem;
+}
+
+.st-peter .st-peter-logo{
+	padding: 20px 0 40px 0;
+}
+
+.st-peter-logo img{
+	height: 20vh;
+}
+
+.st-peter .st-peter-ul-list p{
+	font-size: 1.2rem;
+}
+
+.st-peter-ul-list .outer{
+	font-size: 1.2rem;
+	height: 100vh;
+	padding: 0 35px;
+}
+
+/* PhilCare */
+.philcare .philcare-logo{
+	padding: 20px 0 40px 0;
+}
+
+.philcare-logo img{
+	height: 15vh;
+	max-width: 100%;
+}
+
+.philcare-list{
+	padding: 30px 0;
+}
+
+.philcare-banner{
+	font-size: 1.2rem;
+}
+
+.philcare-text{
+	font-size: 1.1rem;
+}
+
+.philcare-text p{
+	font-size: 1.1rem;
+}
+
+.philcare-text small{
+	text-decoration: underline;
+	font-size: 1.1rem;
+}
+
+.philcare-text ol li{
+	margin-bottom: 10px;
+}
+
+.philcare-text .italic{
+	font-size: 0.9rem;
+}
+
+.philcare-text .important-notes{
+	font-size: 1.2rem;
+}
+
+.philcare-text .important-list{
+	font-size: 1.2rem;
+}
+
+.important-list p{
+	font-size: 1.2rem;
+}
+
+/* Standard Insurance */
+.sixth-page{
+	background-size: contain;
+	padding: 25px 0;
+}
+
+.standard-insurance .standard-insurance-logo{
+	padding: 20px 0 40px 0;
+}
+
+.standard-insurance-logo img{
+	height: 20vh;
+	max-width: 100%;
+}
+
+.standard-insurance .standard-insurance-ul-list p{
+	font-size: 1.3rem;
+}
+
+/*table */
+thead{
+	font-size: 1.1rem;
+}
+
+
+tr th{
+	width: 100vw;
+}
+
+td{
+	font-size: 1.1rem;
+}
+
+/* Standard Insurance */
+.seventh-page{
+	background-size: cover;
+	height: 75vh;
+}
+
+.insure p{
+	font-size: 1.8rem;
+}
+
+.insure button{
+	font-size: 1.2rem;
+	padding: 15px 30px;
+}
+
+/* Footer */
+.footer-inner{
+	padding: 50px 0;
+	position: relative;
+}
+
+.footer-inner img{
+	height: 35vh;
+}
+
+.icon-links{
+	right: 0.5rem;
+	height: 35vh;
+}
+
+.fab, .fas{
+	font-size: 1.2rem;
+}
+
+/* footer banner */
+.footer-banner-inner{
+	font-size: 0.9rem;
+}
+}
+
+/*************** laptop size *****************/
 @media (min-width: 992px) {
 	.navbar-nav{
 		background-color: transparent;
 	}
+	.nav-item .nav-link{
+		margin: 0 15px;
+	}
+
 	.carousel-item img{
 		height: 100vh;
 	}
@@ -221,9 +977,186 @@ html, body{
 	.carousel-caption{
 		position: absolute;
     	left: 50%;
-    	top: 50%;
+    	top: 55%;
     	transform: translate(-50%,-50%);
 	}
+
+	.logo-box{
+		height: auto;
+		padding: 50px 0;
+	}
+	.logo-images img{
+		height: 10vh;
+	}
+
+	.photo img{
+		height: 50vh;
+		width: 100%;
+	}
+
+	/* banner */
+.banner-inner{
+	padding: 10px 0;
+	font-size: 1.5rem;
+}
+
+/* St. Peter */
+.fourth-page{
+	padding: 50px 0;
+}
+
+.st-peter h3{
+	font-size: 1.8rem;
+}
+
+.st-peter ol{
+	height: 75vh;
+}
+
+.st-peter ol li{
+	font-size: 1.5rem;
+}
+
+.st-peter .st-peter-logo{
+	padding: 20px 0 40px 0;
+}
+
+.st-peter-logo img{
+	height: 20vh;
+}
+
+.st-peter .st-peter-ul-list p{
+	font-size: 1.5rem;
+}
+
+.st-peter-ul-list .outer{
+	font-size: 1.5rem;
+	height: 100vh;
+	padding: 0 35px;
+}
+
+/* PhilCare */
+.philcare .philcare-logo{
+	padding: 20px 0 40px 0;
+}
+
+.philcare-logo img{
+	height: 20vh;
+	max-width: 100%;
+}
+
+.philcare-list{
+	padding: 30px 0;
+}
+
+.philcare-banner{
+	font-size: 1.5rem;
+}
+
+.philcare-text{
+	font-size: 1.3rem;
+}
+
+.philcare-text p{
+	font-size: 1.3rem;
+}
+
+.philcare-text small{
+	text-decoration: underline;
+	font-size: 1.3rem;
+}
+
+.philcare-text ol li{
+	margin-bottom: 10px;
+}
+
+.philcare-text .italic{
+	font-size: 1rem;
+}
+
+.philcare-text .important-notes{
+	font-size: 1.5rem;
+}
+
+.philcare-text .important-list{
+	font-size: 1.5rem;
+}
+
+.important-list p{
+	font-size: 1.5rem;
+}
+
+/* Standard Insurance */
+.sixth-page{
+	background-size: contain;
+	padding: 25px 0;
+}
+
+.standard-insurance .standard-insurance-logo{
+	padding: 20px 0 40px 0;
+}
+
+.standard-insurance-logo img{
+	height: 20vh;
+	max-width: 100%;
+}
+
+.standard-insurance .standard-insurance-ul-list p{
+	font-size: 1.5rem;
+}
+
+/*table */
+thead{
+	font-size: 1.3rem;
+}
+
+
+tr th{
+	width: 100vw;
+}
+
+td{
+	font-size: 1.3rem;
+}
+
+/* Standard Insurance */
+.seventh-page{
+	background-size: cover;
+	height: 90vh;
+}
+
+.insure p{
+	font-size: 2.3rem;
+}
+
+.insure button{
+	font-size: 1.5rem;
+	padding: 15px 30px;
+}
+
+/* Footer */
+.footer-inner{
+	padding: 50px 0;
+	position: relative;
+}
+
+.footer-inner img{
+	height: 40vh;
+}
+
+.icon-links{
+	right: 0.5rem;
+	height: 35vh;
+}
+
+.fab, .fas{
+	font-size: 1.5rem;
+}
+
+/* footer banner */
+.footer-banner-inner{
+	font-size: 1rem;
+}
 }
 
 @media (min-width: 1200px) {
@@ -236,11 +1169,187 @@ html, body{
 	.carousel-caption{
 		position: absolute;
 		left: 50%;
-		top: 50%;
+		top: 55%;
 		transform: translate(-50%,-50%);
 	}
-
-	.second-page{
+	.logo-box{
+		height: 25vh;
+	}
+	.logo-images{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.logo-images img{
+		height: 10vh;
+	}
+	.third-page{
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.img-box .photo{
+		padding: 0 30px;
+	}
+	.img-box .photo img{
+		height: 50vh;
+		width: 100%;
+	}
+	.fourth-page{
 		height: 100vh;
 	}
+
+	/* banner */
+.banner-inner{
+	padding: 10px 0;
+	font-size: 1.3rem;
+}
+
+/* St. Peter */
+.fourth-page{
+	background-size: cover;
+	padding: 50px 0;
+}
+
+.st-peter ol{
+	height: 50vh;
+}
+
+.st-peter ol li{
+	font-size: 1.2rem;
+}
+
+.st-peter .st-peter-logo{
+	height: auto;
+	padding: 20px 0 40px 0;
+}
+
+.st-peter-logo img{
+	height: 15vh;
+	max-width: 100%;
+}
+
+.st-peter .st-peter-ul-list p{
+	font-size: 1.3rem;
+}
+
+.st-peter-ul-list .outer{
+	font-size: 1.2rem;
+	height: 90vh;
+	padding: 0 75px;
+}
+
+/* PhilCare */
+.philcare .philcare-logo{
+	padding: 50px 0 50px 0;
+}
+
+.philcare-logo img{
+	height: 15vh;
+	max-width: 100%;
+}
+
+.philcare-list{
+	padding: 30px 0;
+}
+
+.philcare-banner{
+	font-size: 1.5rem;
+	padding: 10px 0;
+}
+
+.philcare-text{
+	font-size: 1.2rem;
+	padding: 10px 0;
+}
+
+.philcare-text p{
+	font-size: 1.2rem;
+}
+
+.philcare-text small{
+	font-size: 1.2rem;
+}
+
+.philcare-text .italic{
+	font-size: 1rem;
+}
+
+/* Standard Insurance */
+.sixth-page{
+	background-size: cover;
+	padding: 50px 0;
+}
+
+.standard-insurance .standard-insurance-logo{
+	padding: 20px 0 40px 0;
+}
+
+.standard-insurance-logo img{
+	height: 15vh;
+	max-width: 100%;
+}
+
+.standard-insurance .standard-insurance-ul-list p{
+	font-size: 1.3rem;
+}
+
+/*table */
+table{
+	width: 100%;
+	height: auto;
+}
+
+.table-bordered{
+	border: 2px solid #f59e0b;
+}
+
+thead{
+	font-size: 1.3rem;
+}
+
+td{
+	font-size: 1.2rem;
+}
+
+/* Standard Insurance */
+.seventh-page{
+	background-size: cover;
+	height: 90vh;
+}
+
+.insure p{
+	font-size: 3rem;
+}
+
+.insure button{
+	font-size: 1.8rem;
+	padding: 15px 40px;
+}
+
+/* Footer */
+.footer-inner{
+	padding: 75px 0;
+}
+
+.footer-inner img{
+	height: 50vh;
+}
+
+.icon-links{
+	position: absolute;
+	right: 0;
+	height: 35vh;
+}
+
+.fab, .fas{
+	font-size: 1.5rem;
+}
+
+/* footer banner */
+.footer-banner-inner{
+	font-size: 1rem;
+	padding: 12px 0;
+}
 }
