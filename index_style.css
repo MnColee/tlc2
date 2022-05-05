@@ -140,6 +140,7 @@ html, body{
 .learnmore-btn:hover{
 	background-color: #fcd34d;
 	color: black;
+	text-decoration: none;
 }
 
 /*three logos-page*/
