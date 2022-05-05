@@ -16,6 +16,7 @@ $(function () {
 //carousel funtion
 $(function(){
     $('.carousel').carousel({
-      interval: 20000
+      interval: 5000,
+      pause: false
     }) ;
     }) ;
