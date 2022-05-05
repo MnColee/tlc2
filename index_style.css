@@ -93,28 +93,6 @@ html, body{
 }
 
 /*carousel*/
-/* .carousel-item {
-	transition: transform 3s ease-out;
-	position: relative;
-}
-
-.carousel-fade .active.carousel-item-start,
-.carousel-fade .active.carousel-item-end {
-	transition: opacity 0s 3s;
-} */
-
-.carousel-item {
-	opacity: 0;
-	transition: opacity .4s ease-out;
-	transition-property: opacity;
-}
-  
-  .carousel-item.active,
-  .carousel-item-left.carousel-item-next,
-  .carousel-item-right.carousel-item-prev {
-	opacity: 1;
-  }
-
 .carousel-caption{
 	position: absolute;
     left: 50%;
