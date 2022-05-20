@@ -1,1360 +1,1626 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body{
-	margin: 0;
-	padding: 0;
-	font-family: 'Kameron', sans-serif;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kameron', sans-serif;
 }
-
-
 
 /* navbar */
-.logo img{
-	height: 20vh;
+.logo img {
+  height: 20vh;
+  display: none;
 }
 
-.navbar{
-	background-color: transparent;
-	padding: 20px 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition-duration: 0.6s;
+.navbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  transition-duration: 0.6s;
+  padding: 0;
+  background-color: #4b5563;
+  width: 100%;
 }
 
-.navbar-nav{
-	background-color: #4b5563;
+.navy {
+  width: 100%;
 }
 
-.nav-item a{
-	font-size: 1rem;
-	font-weight: 600;
-	color: white !important;
-	margin: 5px 0;
+.navbar-nav {
+  margin-top: 40px;
 }
 
-.nav-item .nav-link:hover{
-	color: #f59e0b !important;
+.nav-item a {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: white !important;
 }
 
-.login-btn{
-	background-color: #f59e0b;
-	color: white;
-	border-radius: 40px;
-	padding: 5px 25px;
-	margin-top: 5px;
-	font-size: 1rem;
-	font-weight: 600;
+.nav-item.active {
+  margin-bottom: 10px;
 }
 
-.login-btn:hover{
-	background-color: #fcd34d;
+.nav-link {
+  color: #212121 !important;
+  font-weight: 500;
+  transition: all 200ms linear;
+}
+
+.nav-item .nav-link {
+  color: #4b5563;
+  padding: 0;
+}
+
+.nav-item:hover .nav-link {
+  color: #fcd34d !important;
+}
+
+.nav-link {
+  position: relative;
+  padding: 5px 0 !important;
+}
+.nav-item:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background-color: transparent;
+  opacity: 0;
+  transition: all 200ms linear;
+}
+.nav-item:hover:after {
+  bottom: 0;
+  opacity: 1;
+}
+.nav-item.active:hover:after {
+  opacity: 0;
+}
+.nav-item {
+  position: relative;
+  transition: all 200ms linear;
+}
+
+/* login button*/
+.login-btn {
+  background-color: #f59e0b;
+  color: white;
+  border-radius: 40px;
+  /* padding: 5px 25px; */
+  margin: 5px 16px 5px 14px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.login-btn:hover {
+  background-color: #fcd34d;
 }
 
 .btn:focus {
-	outline: none;
-	box-shadow: none;
-	}
-
-.scroll_navbar{
-	padding: 10px 0;
-	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-	transition-duration: 0.6s;
-	background-color: #4b5563 !important;
+  outline: none;
+  box-shadow: none;
 }
 
-.scroll_logo{
-	height: 10vh !important;
-	transition-duration: 0.6s;
+.scroll_navbar {
+  /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); */
+  transition-duration: 0.6s;
+  background-color: #4b5563 !important;
+  padding: 5px 5px 1px 5px;
 }
 
-.scroll_nav-link{
-	color: white !important;
+/* .scroll_logo {
+  height: 10vh !important;
+  transition-duration: 0.6s;
+} */
+
+.scroll_nav-link {
+  color: white !important;
 }
 
 /*menu bar*/
-.navbar-toggler,
-.navbar-toggler:focus,
-.navbar-toggler:active,
-.navbar-toggler-icon:focus {
-    outline: none;
-    box-shadow: none;
-	border: none;
+.navbar-light .navbar-toggler,
+.navbar-light .navbar-toggler:focus,
+.navbar-light .navbar-toggler:active,
+.navbar-light .navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  float: right;
+  padding: 5px 15px;
 }
 
+.navbar-light .navbar-toggler-icon {
+  width: 30;
+  height: 30px;
+  background-image: none;
+  position: relative;
+  transition: all 300ms linear;
+}
+
+.navbar-light .navbar-toggler-icon:after,
+.navbar-light .navbar-toggler-icon:before {
+  width: 30px;
+  height: 3px;
+  position: absolute;
+  background-color: #fcd34d;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: 2;
+  transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after {
+  top: 18px;
+}
+
+.navbar-light .navbar-toggler-icon:before {
+  top: 8px;
+}
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+/*dropdown menu*/
+.nav-item .dropdown-menu {
+  transform: translate3d(0, 10px, 0);
+  visibility: hidden;
+  opacity: 0;
+  max-height: 0;
+  display: block;
+  padding: 0;
+  margin: 0;
+  transition: all 200ms linear;
+}
+.nav-item.show .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  max-height: 999px;
+  transform: translate3d(0, 0px, 0);
+}
+.dropdown-menu {
+  padding: 8px 0 !important;
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #4b5563;
+  border: none;
+  border-radius: 3px;
+  transition: all 200ms linear;
+}
+.dropdown-item {
+  padding: 3px 15px;
+  color: black !important;
+  border-radius: 2px;
+  transition: all 200ms linear;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f59e0b;
+}
 
 /* hero page */
-.hero-page{
-	position: relative;
+.hero-page {
+  position: relative;
 }
 
 /*carousel*/
-.carousel-caption{
-	position: absolute;
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%,-50%);
+.carousel-caption {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
 }
 
-.carousel-caption img{
-	height: 10vh;
+.carousel-caption img {
+  height: 10vh;
 }
 
-.carousel-caption figcaption{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.carousel-caption figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.carousel-caption figcaption h2{
-	color: #fcd34d;
-	font-size: 3rem;
-	font-weight: 600;
+.carousel-caption figcaption h2 {
+  color: #fcd34d;
+  font-size: 3rem;
+  font-weight: 600;
 }
 
-.carousel-caption figcaption h3{
-	color: white;
-	font-size: 1.5rem;
-	font-weight: 500;
+.carousel-caption figcaption h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
-.carousel-item img{
-	height: 100vh;
+.carousel-item img {
+  height: 100vh;
 }
 
-.learnmore-btn{
-	background-color: #f59e0b;
-	border-radius: 10px;
-	color: white;
-	text-decoration: none;
-	padding: 8px 15px;
-	width: auto;
-	font-size: 1rem;
+.learnmore-btn {
+  background-color: #f59e0b;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  width: auto;
+  font-size: 1rem;
 }
 
-.learnmore-btn:hover{
-	background-color: #fcd34d;
-	color: black;
-	text-decoration: none;
+.learnmore-btn:hover {
+  background-color: #fcd34d;
+  color: black;
+  text-decoration: none;
 }
 
 /*three logos-page*/
-.logo-box{
-	height: 20vh;
+.logo-box {
+  height: 20vh;
 }
-.logo-images{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.logo-images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.logo-images img{
-	height: 5vh;
+.logo-images img {
+  height: 5vh;
 }
 
 /*images page*/
-.third-page{
-	height: auto;
-	padding-bottom: 30px;
+.third-page {
+  height: auto;
+  padding-bottom: 30px;
 }
 
-.photo img{
-	height: 20vh;
-	width: 100%;
+.photo img {
+  height: 20vh;
+  width: 100%;
 }
-
 
 /* banner */
-.banner{
-	height: auto;
-	width: 100%;
-	background-color: #4b5563;
+.banner {
+  height: auto;
+  width: 100%;
+  background-color: #4b5563;
 }
 
-.banner-inner{
-	color: white;
-	text-align: center;
-	padding: 10px 0;
-	font-size: 0.8rem;
+.banner-inner {
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8rem;
 }
 
 /* St. Peter */
-.fourth-page{
-	height: auto;
-	background-image: url('/img/bg-casket.jpg'); 
-	background-repeat: no-repeat; 
-	background-size: cover;
-	padding: 50px 0;
+.fourth-page {
+  height: auto;
+  background-image: url('/img/bg-casket.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px 0;
 }
 
-.st-peter{
-	height: auto;
+.st-peter {
+  height: auto;
 }
 
-.st-peter h3{
-	font-weight: 600;
-	font-size: 0.9rem;
-	text-align: center;
+.st-peter h3 {
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
-.st-peter ol{
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-evenly;
-	flex-direction: column;
-	height: 65vh;
+.st-peter ol {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 65vh;
+  margin: 0 10px 0 25px;
 }
 
-.st-peter ol li{
-	font-size: 1rem;
+.st-peter ol li {
+  font-size: 1rem;
 }
 
-.st-peter .st-peter-logo{
-	height: auto;
-	width: 100%;
-	padding: 20px 0 40px 0;
-	text-align: center;
+.st-peter .st-peter-logo {
+  height: auto;
+  width: 100%;
+  padding: 20px 0 40px 0;
+  text-align: center;
 }
 
-.st-peter-logo img{
-	height: 10vh;
-	max-width: 100%;
+.st-peter-logo img {
+  height: 10vh;
+  max-width: 100%;
 }
 
-.st-peter .st-peter-ul-list p{
-	font-size: 1rem;
-	font-weight: 500;
-	text-align: center;
+.st-peter .st-peter-ul-list p {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
 }
 
-.st-peter-ul-list .outer{
-	font-size: 1rem;
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-evenly;
-	flex-direction: column;
-	height: 90vh;
-	padding: 0 35px;
+.st-peter-ul-list .outer {
+  font-size: 1rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 90vh;
+  padding: 0 35px;
 }
 
 /* PhilCare */
-.fifth-page{
-	height: auto;
+.fifth-page {
+  height: auto;
 }
 
-.philcare{
-	height: auto;
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+.philcare {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.philcare .philcare-logo{
-	height: auto;
-	width: 100%;
-	padding: 20px 0 40px 0;
-	text-align: center;
+.philcare .philcare-logo {
+  height: auto;
+  width: 100%;
+  padding: 20px 0 40px 0;
+  text-align: center;
 }
 
-.philcare-logo img{
-	height: 10vh;
-	max-width: 100%;
+.philcare-logo img {
+  height: 10vh;
+  max-width: 100%;
 }
 
-.philcare-card{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
+.philcare-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.philcare-list{
-	padding: 30px 0;
-	height: auto;
-	width: 100%;
+.philcare-list {
+  padding: 30px 0;
+  height: auto;
+  width: 100%;
 }
 
-.philcare-banner{
-	background-color: #e73942;
-	width: 100%;
-	color: #f3f4f6;
-	font-size: 0.9rem;
-	font-weight: 600;
-	padding: 10px 0;
+.philcare-banner {
+  background-color: #e73942;
+  width: 100%;
+  color: #f3f4f6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 0;
 }
 
-.philcare-text{
-	font-size: 0.9rem;
-	padding: 10px 0;
+.philcare-text {
+  font-size: 0.9rem;
+  padding: 10px 0;
 }
 
-.philcare-text p{
-	text-decoration: underline;
-	font-size: 0.9rem;
+.philcare-text p {
+  text-decoration: underline;
+  font-size: 0.9rem;
 }
 
-.philcare-text small{
-	text-decoration: underline;
-	font-size: 0.9rem;
+.philcare-text small {
+  text-decoration: underline;
+  font-size: 0.9rem;
 }
 
-.philcare-text ol li{
-	margin-bottom: 10px;
+.philcare-text ol li,
+ul li {
+  margin-bottom: 10px;
+  margin-left: 15px;
 }
 
-.philcare-text .italic{
-	font-size: 0.85rem;
-	font-style: italic;
-	text-decoration: none;
+.philcare-text .italic {
+  font-size: 0.85rem;
+  font-style: italic;
+  text-decoration: none;
 }
 
-.philcare-text .important-notes{
-	font-weight: 700;
-	text-decoration: none;
-	font-size: 1rem;
+.philcare-text .important-notes {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-.philcare-text .important-list{
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: auto;
-	font-size: 1rem;
+.philcare-text .important-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
 }
 
-.important-list p{
-	text-decoration: none;
-	font-size: 1rem;
+.important-list p {
+  text-decoration: none;
+  font-size: 1rem;
 }
 
-.important-list .important-list-highlight{
-	color: #f59e0b;
-	text-decoration: none;
+.important-list .important-list-highlight {
+  color: #f59e0b;
+  text-decoration: none;
 }
 
 /* Standard Insurance */
-.sixth-page{
-	height: auto;
-	background-image: url('/img/wheelchair.jpg'); 
-	background-repeat: no-repeat; 
-	background-size: contain;
-	padding: 0 0 50px 0;
+.sixth-page {
+  height: auto;
+  background-image: url('/img/wheelchair.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0 0 50px 0;
 }
 
-.standard-insurance{
-	height: auto;
+.standard-insurance {
+  height: auto;
 }
 
-.standard-insurance .standard-insurance-logo{
-	height: auto;
-	width: 100%;
-	padding: 20px 0 40px 0;
-	text-align: center;
+.standard-insurance .standard-insurance-logo {
+  height: auto;
+  width: 100%;
+  padding: 20px 0 40px 0;
+  text-align: center;
 }
 
-.standard-insurance-logo img{
-	height: 10vh;
-	max-width: 100%;
+.standard-insurance-logo img {
+  height: 10vh;
+  max-width: 100%;
 }
 
-.standard-insurance .standard-insurance-ul-list{
-	width: 100%;
+.standard-insurance .standard-insurance-ul-list {
+  width: 100%;
 }
 
-.standard-insurance .standard-insurance-ul-list p{
-	font-size: 0.9rem;
-	font-weight: 500;
+.standard-insurance .standard-insurance-ul-list p {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /*table */
-table{
-	width: 100%;
-	height: auto;
+table {
+  width: 100%;
+  height: auto;
 }
 
-.table-bordered{
-	border: 1px solid #f59e0b;
+.table-bordered {
+  border: 1px solid #f59e0b;
 }
 
-thead{
-	background-color: #f59e0b;
-	color: white;
-	font-size: 0.9rem;
-	width: 100%;
+thead {
+  background-color: #f59e0b;
+  color: white;
+  font-size: 0.9rem;
+  width: 100%;
 }
 
-tbody{
-	background-color: white;
-	width: 100%;
+tbody {
+  background-color: white;
+  width: 100%;
 }
 
-tr th{
-	width: 100vw;
+tr th {
+  width: 100vw;
 }
 
-td{
-	font-size: 0.9rem;
-	color: black;
+td {
+  font-size: 0.9rem;
+  color: black;
 }
 
 /* Standard Insurance */
-.seventh-page{
-	height: auto;
-	background-image: url('/img/family.jpg'); 
-	background-repeat: no-repeat; 
-	background-size: contain;
-	height: 40vh;
-	width: 100%;
+.seventh-page {
+  height: auto;
+  background-image: url('/img/family.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40vh;
+  width: 100%;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	position: relative;
+  position: relative;
 }
 
-.for-overlay{
-	position: absolute;
-	inset: 0;
-	background-color: white;
-	opacity: 30%;
-	z-index: 1;
+.for-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: white;
+  opacity: 30%;
+  z-index: 1;
 }
 
-.for-overlay-up{
-	position: absolute;
-	z-index: 2;
+.for-overlay-up {
+  position: absolute;
+  z-index: 2;
 }
 
-.insure{
-	display: flex;
-	align-items: center;
-	justify-content: center;
+.insure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.insure p{
-	font-size: 1rem;
-	text-align: center;
-	font-weight: 900;
+.insure p {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 900;
 }
 
-.insure p small{
-	color: #f59e0b;
-	text-shadow: #4b5563;
+.insure p small {
+  color: #f59e0b;
+  text-shadow: #4b5563;
 }
 
-.insure button{
-	background-color: #fcd34d;
-	color: black;
-	font-size: 0.9rem;
-	padding: 10px 20px;
-	border-radius: 20px;
-	border: none;
-	outline: none;
-	box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+.insure button {
+  background-color: #fcd34d;
+  color: black;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-.insure button:hover{
-	background-color: #f59e0b;
-	color: white;
-	box-shadow: none;
-	transition: all 0.2s ease-in;
+.insure button:hover {
+  background-color: #f59e0b;
+  color: white;
+  box-shadow: none;
+  transition: all 0.2s ease-in;
 }
 
 /* Footer */
-.footer{
-	height: auto;
-	width: 100%;
+.footer {
+  height: auto;
+  width: 100%;
 }
 
-.footer-inner{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	padding: 50px 0;
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 50px 0;
 
-	position: relative;
+  position: relative;
 }
 
-.footer-inner img{
-	height: 25vh;
-	
+.footer-inner img {
+  height: 25vh;
 }
 
-.icon-links{
-	position: absolute;
-	right: 0.5rem;
+.icon-links {
+  position: absolute;
+  right: 0.5rem;
 
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
 
-	height: 35vh;
+  height: 35vh;
 }
 
-.fab, .fas{
-	font-size: 1rem;
-	color: #4b5563;
-	cursor: pointer;
+.fab,
+.fas {
+  font-size: 1rem;
+  color: #4b5563;
+  cursor: pointer;
 }
 
-.fab:hover, .fas:hover{
-	color: #fcd34d;
-	transition: all 0.4s;
-	transform: translateY(-10px)
+.fab:hover,
+.fas:hover {
+  color: #fcd34d;
+  transition: all 0.4s;
+  transform: translateY(-10px);
 }
 
 /* footer banner */
-.footer-banner{
-	width: 100%;
-	height: auto;
-	background-color: #4b5563;
-	text-align: center;
+.footer-banner {
+  width: 100%;
+  height: auto;
+  background-color: #4b5563;
+  text-align: center;
 }
 
-.footer-banner-inner{
-	font-size: 0.85rem;
-	color: white;
-	padding: 12px 0;
+.footer-banner-inner {
+  font-size: 0.85rem;
+  color: white;
+  padding: 12px 0;
 }
-
 
 /*************** mobile size *****************/
-@media (min-width: 576px) {
+@media only screen and (min-width: 576px) {
+  .carousel-caption figcaption h2 {
+    font-size: 5rem;
+  }
 
-	.carousel-caption figcaption h2{
-		font-size: 5rem;
-	}
-	
-	.carousel-caption figcaption h3{
-		font-size: 2.5rem;
-	}
-	.carousel-item img{
-		height: 100vh;
-	}
-	
-	.learnmore-btn{
-		padding: 10px 20px;
-		font-size: 1.3rem;
-	}
-	.carousel-caption{
-		position: absolute;
-    	left: 50%;
-    	top: 55%;
-    	transform: translate(-50%,-50%);
-	}
-	.logo-box{
-		height: 20vh;
-	}
-	.logo-images img{
-		height: 8vh;
-	}
+  .carousel-caption figcaption h3 {
+    font-size: 2.5rem;
+  }
+  .carousel-item img {
+    height: 100vh;
+  }
 
-	.photo img{
-		height: 30vh;
-		width: 100%;
-	}
+  .learnmore-btn {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+  }
+  .carousel-caption {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+  .logo-box {
+    height: 20vh;
+  }
+  .logo-images img {
+    height: 8vh;
+  }
 
-	/* banner */
-.banner-inner{
-	padding: 10px 0;
-	font-size: 1rem;
+  .photo img {
+    height: 30vh;
+    width: 100%;
+  }
+
+  /* banner */
+  .banner-inner {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+
+  /* St. Peter */
+  .fourth-page {
+    padding: 50px 0;
+  }
+
+  .st-peter h3 {
+    font-size: 1.2rem;
+  }
+
+  .st-peter ol {
+    height: 65vh;
+  }
+
+  .st-peter ol li {
+    font-size: 1rem;
+  }
+
+  .st-peter .st-peter-logo {
+    padding: 20px 0 40px 0;
+  }
+
+  .st-peter-logo img {
+    height: 15vh;
+  }
+
+  .st-peter .st-peter-ul-list p {
+    font-size: 1rem;
+  }
+
+  .st-peter-ul-list .outer {
+    font-size: 1rem;
+    height: 90vh;
+    padding: 0 35px;
+  }
+
+  /* PhilCare */
+  .philcare .philcare-logo {
+    padding: 20px 0 40px 0;
+  }
+
+  .philcare-logo img {
+    height: 15vh;
+    max-width: 100%;
+  }
+
+  .philcare-list {
+    padding: 30px 0;
+  }
+
+  .philcare-banner {
+    font-size: 1rem;
+  }
+
+  .philcare-text {
+    font-size: 1rem;
+  }
+
+  .philcare-text p {
+    font-size: 1rem;
+  }
+
+  .philcare-text small {
+    text-decoration: underline;
+    font-size: 1rem;
+  }
+
+  .philcare-text ol li {
+    margin-bottom: 10px;
+  }
+
+  .philcare-text .italic {
+    font-size: 0.85rem;
+  }
+
+  .philcare-text .important-notes {
+    font-size: 1rem;
+  }
+
+  .philcare-text .important-list {
+    font-size: 1rem;
+  }
+
+  .important-list p {
+    font-size: 1rem;
+  }
+
+  /* Standard Insurance */
+  .sixth-page {
+    background-size: contain;
+    padding: 25px 0;
+  }
+
+  .standard-insurance .standard-insurance-logo {
+    padding: 20px 0 40px 0;
+  }
+
+  .standard-insurance-logo img {
+    height: 15vh;
+    max-width: 100%;
+  }
+
+  .standard-insurance .standard-insurance-ul-list p {
+    font-size: 1rem;
+  }
+
+  /*table */
+  thead {
+    font-size: 1rem;
+  }
+
+  tr th {
+    width: 100vw;
+  }
+
+  td {
+    font-size: 1rem;
+  }
+
+  /* Standard Insurance */
+  .seventh-page {
+    background-size: cover;
+    height: 50vh;
+  }
+
+  .insure p {
+    font-size: 1.5rem;
+  }
+
+  .insure button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    padding: 50px 0;
+    position: relative;
+  }
+
+  .footer-inner img {
+    height: 30vh;
+  }
+
+  .icon-links {
+    right: 0.5rem;
+    height: 35vh;
+  }
+
+  .fab,
+  .fas {
+    font-size: 1rem;
+    color: #4b5563;
+    cursor: pointer;
+  }
+
+  .fab:hover,
+  .fas:hover {
+    color: #fcd34d;
+    transition: all 0.4s;
+    transform: translateY(-10px);
+  }
+
+  /* footer banner */
+  .footer-banner-inner {
+    font-size: 0.9rem;
+    color: white;
+    padding: 12px 0;
+  }
 }
-
-/* St. Peter */
-.fourth-page{
-	padding: 50px 0;
-}
-
-.st-peter h3{
-	font-size: 1.2rem;
-}
-
-.st-peter ol{
-	height: 65vh;
-}
-
-.st-peter ol li{
-	font-size: 1rem;
-}
-
-.st-peter .st-peter-logo{
-	padding: 20px 0 40px 0;
-}
-
-.st-peter-logo img{
-	height: 15vh;
-}
-
-.st-peter .st-peter-ul-list p{
-	font-size: 1rem;
-}
-
-.st-peter-ul-list .outer{
-	font-size: 1rem;
-	height: 90vh;
-	padding: 0 35px;
-}
-
-/* PhilCare */
-.philcare .philcare-logo{
-	padding: 20px 0 40px 0;
-}
-
-.philcare-logo img{
-	height: 15vh;
-	max-width: 100%;
-}
-
-.philcare-list{
-	padding: 30px 0;
-}
-
-.philcare-banner{
-	font-size: 1rem;
-}
-
-.philcare-text{
-	font-size: 1rem;
-}
-
-.philcare-text p{
-	font-size: 1rem;
-}
-
-.philcare-text small{
-	text-decoration: underline;
-	font-size: 1rem;
-}
-
-.philcare-text ol li{
-	margin-bottom: 10px;
-}
-
-.philcare-text .italic{
-	font-size: 0.85rem;
-}
-
-.philcare-text .important-notes{
-	font-size: 1rem;
-}
-
-.philcare-text .important-list{
-	font-size: 1rem;
-}
-
-.important-list p{
-	font-size: 1rem;
-}
-
-/* Standard Insurance */
-.sixth-page{
-	background-size: contain;
-	padding: 25px 0;
-}
-
-.standard-insurance .standard-insurance-logo{
-	padding: 20px 0 40px 0;
-}
-
-.standard-insurance-logo img{
-	height: 15vh;
-	max-width: 100%;
-}
-
-.standard-insurance .standard-insurance-ul-list p{
-	font-size: 1rem;
-}
-
-/*table */
-thead{
-	font-size: 1rem;
-}
-
-
-tr th{
-	width: 100vw;
-}
-
-td{
-	font-size: 1rem;
-}
-
-/* Standard Insurance */
-.seventh-page{
-	background-size: cover;
-	height: 50vh;
-}
-
-.insure p{
-	font-size: 1.5rem;
-}
-
-.insure button{
-	font-size: 1rem;
-	padding: 10px 25px;
-}
-
-/* Footer */
-.footer-inner{
-	padding: 50px 0;
-	position: relative;
-}
-
-.footer-inner img{
-	height: 30vh;
-}
-
-.icon-links{
-	right: 0.5rem;
-	height: 35vh;
-}
-
-.fab, .fas{
-	font-size: 1rem;
-	color: #4b5563;
-	cursor: pointer;
-}
-
-.fab:hover, .fas:hover{
-	color: #fcd34d;
-	transition: all 0.4s;
-	transform: translateY(-10px)
-}
-
-/* footer banner */
-.footer-banner-inner{
-	font-size: 0.9rem;
-	color: white;
-	padding: 12px 0;
-}
-
-}
-
 
 /*************** tablet size *****************/
-@media (min-width: 768px) {
-	.carousel-item img{
-		height: 100vh;
-	}
+@media only screen and (min-width: 768px) {
+  .carousel-item img {
+    height: 100vh;
+  }
 
-	.carousel-caption figcaption h2{
-		font-size: 5rem;
-	}
-	
-	.carousel-caption figcaption h3{
-		font-size: 2.5rem;
-	}
-	
-	.learnmore-btn{
-		padding: 10px 20px;
-		font-size: 1.3rem;
-	}
-	.carousel-caption{
-		position: absolute;
-    	left: 50%;
-    	top: 55%;
-    	transform: translate(-50%,-50%);
-	}
+  .carousel-caption figcaption h2 {
+    font-size: 5rem;
+  }
 
-	.logo-box{
-		height: auto;
-		padding: 50px 0;
-	}
-	.logo-images img{
-		height: 10vh;
-	}
+  .carousel-caption figcaption h3 {
+    font-size: 2.5rem;
+  }
 
-	.photo img{
-		height: 40vh;
-		width: 100%;
-	}
+  .learnmore-btn {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+  }
+  .carousel-caption {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
 
-	/* banner */
-.banner-inner{
-	padding: 10px 0;
-	font-size: 1.2rem;
-}
+  .logo-box {
+    height: auto;
+    padding: 50px 0;
+  }
+  .logo-images img {
+    height: 10vh;
+  }
 
-/* St. Peter */
-.fourth-page{
-	padding: 50px 0;
-}
+  .photo img {
+    height: 40vh;
+    width: 100%;
+  }
 
-.st-peter h3{
-	font-size: 1.5rem;
-}
+  /* banner */
+  .banner-inner {
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
 
-.st-peter ol{
-	height: 75vh;
-}
+  /* St. Peter */
+  .fourth-page {
+    padding: 50px 0;
+  }
 
-.st-peter ol li{
-	font-size: 1.2rem;
-}
+  .st-peter h3 {
+    font-size: 1.5rem;
+  }
 
-.st-peter .st-peter-logo{
-	padding: 20px 0 40px 0;
-}
+  .st-peter ol {
+    height: 75vh;
+  }
 
-.st-peter-logo img{
-	height: 20vh;
-}
+  .st-peter ol li {
+    font-size: 1.2rem;
+  }
 
-.st-peter .st-peter-ul-list p{
-	font-size: 1.2rem;
-}
+  .st-peter .st-peter-logo {
+    padding: 20px 0 40px 0;
+  }
 
-.st-peter-ul-list .outer{
-	font-size: 1.2rem;
-	height: 100vh;
-	padding: 0 35px;
-}
+  .st-peter-logo img {
+    height: 20vh;
+  }
 
-/* PhilCare */
-.philcare .philcare-logo{
-	padding: 20px 0 40px 0;
-}
+  .st-peter .st-peter-ul-list p {
+    font-size: 1.2rem;
+  }
 
-.philcare-logo img{
-	height: 15vh;
-	max-width: 100%;
-}
+  .st-peter-ul-list .outer {
+    font-size: 1.2rem;
+    height: 100vh;
+    padding: 0 35px;
+  }
 
-.philcare-list{
-	padding: 30px 0;
-}
+  /* PhilCare */
+  .philcare .philcare-logo {
+    padding: 20px 0 40px 0;
+  }
 
-.philcare-banner{
-	font-size: 1.2rem;
-}
+  .philcare-logo img {
+    height: 15vh;
+    max-width: 100%;
+  }
 
-.philcare-text{
-	font-size: 1.1rem;
-}
+  .philcare-list {
+    padding: 30px 0;
+  }
 
-.philcare-text p{
-	font-size: 1.1rem;
-}
+  .philcare-banner {
+    font-size: 1.2rem;
+  }
 
-.philcare-text small{
-	text-decoration: underline;
-	font-size: 1.1rem;
-}
+  .philcare-text {
+    font-size: 1.1rem;
+  }
 
-.philcare-text ol li{
-	margin-bottom: 10px;
-}
+  .philcare-text p {
+    font-size: 1.1rem;
+  }
 
-.philcare-text .italic{
-	font-size: 0.9rem;
-}
+  .philcare-text small {
+    text-decoration: underline;
+    font-size: 1.1rem;
+  }
 
-.philcare-text .important-notes{
-	font-size: 1.2rem;
-}
+  .philcare-text ol li {
+    margin-bottom: 10px;
+  }
 
-.philcare-text .important-list{
-	font-size: 1.2rem;
-}
+  .philcare-text .italic {
+    font-size: 0.9rem;
+  }
 
-.important-list p{
-	font-size: 1.2rem;
-}
+  .philcare-text .important-notes {
+    font-size: 1.2rem;
+  }
 
-/* Standard Insurance */
-.sixth-page{
-	background-size: contain;
-	padding: 25px 0;
-}
+  .philcare-text .important-list {
+    font-size: 1.2rem;
+  }
 
-.standard-insurance .standard-insurance-logo{
-	padding: 20px 0 40px 0;
-}
+  .important-list p {
+    font-size: 1.2rem;
+  }
 
-.standard-insurance-logo img{
-	height: 20vh;
-	max-width: 100%;
-}
+  /* Standard Insurance */
+  .sixth-page {
+    background-size: contain;
+    padding: 25px 0;
+  }
 
-.standard-insurance .standard-insurance-ul-list p{
-	font-size: 1.3rem;
-}
+  .standard-insurance .standard-insurance-logo {
+    padding: 20px 0 40px 0;
+  }
 
-/*table */
-thead{
-	font-size: 1.1rem;
-}
+  .standard-insurance-logo img {
+    height: 20vh;
+    max-width: 100%;
+  }
 
+  .standard-insurance .standard-insurance-ul-list p {
+    font-size: 1.3rem;
+  }
 
-tr th{
-	width: 100vw;
-}
+  /*table */
+  thead {
+    font-size: 1.1rem;
+  }
 
-td{
-	font-size: 1.1rem;
-}
+  tr th {
+    width: 100vw;
+  }
 
-/* Standard Insurance */
-.seventh-page{
-	background-size: cover;
-	height: 75vh;
-}
+  td {
+    font-size: 1.1rem;
+  }
 
-.insure p{
-	font-size: 1.8rem;
-}
+  /* Standard Insurance */
+  .seventh-page {
+    background-size: cover;
+    height: 75vh;
+  }
 
-.insure button{
-	font-size: 1.2rem;
-	padding: 15px 30px;
-}
+  .insure p {
+    font-size: 1.8rem;
+  }
 
-/* Footer */
-.footer-inner{
-	padding: 50px 0;
-	position: relative;
-}
+  .insure button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+  }
 
-.footer-inner img{
-	height: 35vh;
-}
+  /* Footer */
+  .footer-inner {
+    padding: 50px 0;
+    position: relative;
+  }
 
-.icon-links{
-	right: 0.5rem;
-	height: 35vh;
-}
+  .footer-inner img {
+    height: 35vh;
+  }
 
-.fab, .fas{
-	font-size: 1.2rem;
-}
+  .icon-links {
+    right: 0.5rem;
+    height: 35vh;
+  }
 
-/* footer banner */
-.footer-banner-inner{
-	font-size: 0.9rem;
-}
+  .fab,
+  .fas {
+    font-size: 1.2rem;
+  }
+
+  /* footer banner */
+  .footer-banner-inner {
+    font-size: 0.9rem;
+  }
 }
 
 /*************** laptop size *****************/
-@media (min-width: 992px) {
-	.navbar-nav{
-		background-color: transparent;
-	}
-	.nav-item .nav-link{
-		margin: 0 15px;
-	}
-
-	.login-btn{
-		padding: 5px 25px;
-		margin-top: 0px;
-		margin-left: 10px;
-	}
-
-	.carousel-item img{
-		height: 100vh;
-	}
-	.carousel-caption figcaption h2{
-		font-size: 6rem;
-	}
-	
-	.carousel-caption figcaption h3{
-		font-size: 3rem;
-	}
-	
-	.learnmore-btn{
-		padding: 10px 20px;
-		font-size: 1.3rem;
-	}
-	.carousel-caption{
-		position: absolute;
-    	left: 50%;
-    	top: 55%;
-    	transform: translate(-50%,-50%);
-	}
-
-	.logo-box{
-		height: auto;
-		padding: 50px 0;
-	}
-	.logo-images img{
-		height: 10vh;
-	}
-
-	.photo img{
-		height: 50vh;
-		width: 100%;
-	}
-
-	/* banner */
-.banner-inner{
-	padding: 10px 0;
-	font-size: 1.5rem;
-}
-
-/* St. Peter */
-.fourth-page{
-	padding: 50px 0;
-}
-
-.st-peter h3{
-	font-size: 1.8rem;
-}
-
-.st-peter ol{
-	height: 75vh;
-}
-
-.st-peter ol li{
-	font-size: 1.5rem;
-}
-
-.st-peter .st-peter-logo{
-	padding: 20px 0 40px 0;
-}
-
-.st-peter-logo img{
-	height: 20vh;
-}
-
-.st-peter .st-peter-ul-list p{
-	font-size: 1.5rem;
-}
-
-.st-peter-ul-list .outer{
-	font-size: 1.5rem;
-	height: 100vh;
-	padding: 0 35px;
-}
-
-/* PhilCare */
-.philcare .philcare-logo{
-	padding: 20px 0 40px 0;
-}
-
-.philcare-logo img{
-	height: 20vh;
-	max-width: 100%;
-}
-
-.philcare-list{
-	padding: 30px 0;
-}
-
-.philcare-banner{
-	font-size: 1.5rem;
-}
-
-.philcare-text{
-	font-size: 1.3rem;
-}
-
-.philcare-text p{
-	font-size: 1.3rem;
-}
-
-.philcare-text small{
-	text-decoration: underline;
-	font-size: 1.3rem;
-}
-
-.philcare-text ol li{
-	margin-bottom: 10px;
-}
-
-.philcare-text .italic{
-	font-size: 1rem;
-}
-
-.philcare-text .important-notes{
-	font-size: 1.5rem;
-}
-
-.philcare-text .important-list{
-	font-size: 1.5rem;
-}
-
-.important-list p{
-	font-size: 1.5rem;
-}
-
-/* Standard Insurance */
-.sixth-page{
-	background-size: contain;
-	padding: 25px 0;
-}
-
-.standard-insurance .standard-insurance-logo{
-	padding: 20px 0 40px 0;
-}
-
-.standard-insurance-logo img{
-	height: 20vh;
-	max-width: 100%;
-}
-
-.standard-insurance .standard-insurance-ul-list p{
-	font-size: 1.5rem;
-}
-
-/*table */
-thead{
-	font-size: 1.3rem;
-}
-
-
-tr th{
-	width: 100vw;
-}
-
-td{
-	font-size: 1.3rem;
-}
-
-/* Standard Insurance */
-.seventh-page{
-	background-size: cover;
-	height: 90vh;
-}
-
-.insure p{
-	font-size: 2.3rem;
-}
-
-.insure button{
-	font-size: 1.5rem;
-	padding: 15px 30px;
-}
-
-/* Footer */
-.footer-inner{
-	padding: 50px 0;
-	position: relative;
-}
-
-.footer-inner img{
-	height: 40vh;
-}
-
-.icon-links{
-	right: 0.5rem;
-	height: 35vh;
-}
-
-.fab, .fas{
-	font-size: 1.5rem;
-}
-
-/* footer banner */
-.footer-banner-inner{
-	font-size: 1rem;
-}
-}
-
-@media (min-width: 1200px) {
-	.navbar-nav{
-		background-color: transparent;
-	}
-
-	.login-btn{
-		padding: 5px 25px;
-		margin-top: 0px;
-		margin-left: 10px;
-	}
-	.carousel-item img{
-		height: 100vh;
-	}
-	.carousel-caption{
-		position: absolute;
-		left: 50%;
-		top: 55%;
-		transform: translate(-50%,-50%);
-	}
-	.logo-box{
-		height: 25vh;
-	}
-	.logo-images{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.logo-images img{
-		height: 10vh;
-	}
-	.third-page{
-		height: auto;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.img-box .photo{
-		padding: 0 30px;
-	}
-	.img-box .photo img{
-		height: 50vh;
-		width: 100%;
-	}
-	.fourth-page{
-		height: 100vh;
-	}
-
-	/* banner */
-.banner-inner{
-	padding: 10px 0;
-	font-size: 1.3rem;
-}
-
-/* St. Peter */
-.fourth-page{
-	background-size: cover;
-	padding: 50px 0;
-}
-
-.st-peter ol{
-	height: 50vh;
-}
-
-.st-peter ol li{
-	font-size: 1.2rem;
-}
-
-.st-peter .st-peter-logo{
-	height: auto;
-	padding: 20px 0 40px 0;
-}
-
-.st-peter-logo img{
-	height: 15vh;
-	max-width: 100%;
-}
-
-.st-peter .st-peter-ul-list p{
-	font-size: 1.3rem;
-}
-
-.st-peter-ul-list .outer{
-	font-size: 1.2rem;
-	height: 90vh;
-	padding: 0 75px;
-}
-
-/* PhilCare */
-.philcare .philcare-logo{
-	padding: 50px 0 50px 0;
-}
-
-.philcare-logo img{
-	height: 15vh;
-	max-width: 100%;
-}
-
-.philcare-list{
-	padding: 30px 0;
-}
-
-.philcare-banner{
-	font-size: 1.5rem;
-	padding: 10px 0;
-}
-
-.philcare-text{
-	font-size: 1.2rem;
-	padding: 10px 0;
-}
-
-.philcare-text p{
-	font-size: 1.2rem;
-}
-
-.philcare-text small{
-	font-size: 1.2rem;
-}
-
-.philcare-text .italic{
-	font-size: 1rem;
-}
-
-/* Standard Insurance */
-.sixth-page{
-	background-size: cover;
-	padding: 50px 0;
-}
-
-.standard-insurance .standard-insurance-logo{
-	padding: 20px 0 40px 0;
-}
-
-.standard-insurance-logo img{
-	height: 15vh;
-	max-width: 100%;
-}
-
-.standard-insurance .standard-insurance-ul-list p{
-	font-size: 1.3rem;
-}
-
-/*table */
-table{
-	width: 100%;
-	height: auto;
-}
-
-.table-bordered{
-	border: 2px solid #f59e0b;
-}
-
-thead{
-	font-size: 1.3rem;
-}
-
-td{
-	font-size: 1.2rem;
-}
-
-/* Standard Insurance */
-.seventh-page{
-	background-size: cover;
-	height: 90vh;
-}
-
-.insure p{
-	font-size: 3rem;
-}
-
-.insure button{
-	font-size: 1.8rem;
-	padding: 15px 40px;
-}
-
-/* Footer */
-.footer-inner{
-	padding: 75px 0;
-}
-
-.footer-inner img{
-	height: 50vh;
-}
-
-.icon-links{
-	position: absolute;
-	right: 0;
-	height: 35vh;
-}
-
-.fab, .fas{
-	font-size: 1.5rem;
-}
-
-/* footer banner */
-.footer-banner-inner{
-	font-size: 1rem;
-	padding: 12px 0;
-}
+@media only screen and (min-width: 992px) {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.6s;
+    padding: 40px 10px;
+    background-color: transparent !important;
+  }
+
+  .nav-item.active {
+    margin-bottom: 0;
+  }
+
+  li.nav-item {
+    margin: auto 0;
+  }
+
+  .nav-item .nav-link {
+    position: relative;
+    color: #4b5563;
+    margin: 0 20px;
+  }
+
+  .nav-link {
+    color: #212121 !important;
+    font-weight: 500;
+    transition: all 200ms linear;
+  }
+
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px !important;
+    margin: 0;
+  }
+
+  .nav-item:hover .nav-link {
+    color: #fcd34d !important;
+  }
+
+  .nav-item:after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: '';
+    background-color: #fcd34d;
+    opacity: 0;
+    transition: all 200ms linear;
+  }
+  .nav-item:hover:after {
+    bottom: 0;
+    opacity: 1;
+  }
+  .nav-item.active:hover:after {
+    opacity: 0;
+  }
+  .nav-item {
+    position: relative;
+    transition: all 200ms linear;
+  }
+
+  .login-btn {
+    background-color: #f59e0b;
+    color: white;
+    border-radius: 40px;
+    margin: 0 15px;
+    padding: 4px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .login-btn:hover {
+    background-color: #fcd34d;
+  }
+
+  .btn:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .scroll_navbar {
+    /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); */
+    transition-duration: 0.6s;
+    background-color: #4b5563 !important;
+    padding: 10px 10px;
+  }
+
+  /* .scroll_logo {
+    height: 10vh !important;
+    transition-duration: 0.6s;
+  } */
+
+  .scroll_nav-link {
+    color: white !important;
+  }
+
+  /*dropdown menu*/
+  .nav-item .dropdown-menu {
+    transform: translate3d(0, 10px, 0);
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    display: block;
+    padding: 0;
+    margin: 0;
+    transition: all 200ms linear;
+  }
+  .nav-item.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    max-height: 999px;
+    transform: translate3d(0, 0px, 0);
+  }
+  .dropdown-menu {
+    padding: 10px !important;
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #4b5563;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+    transition: all 200ms linear;
+  }
+  .dropdown-item {
+    padding: 3px 15px;
+    color: white;
+    border-radius: 2px;
+    transition: all 200ms linear;
+  }
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    background-color: #f59e0b;
+  }
+
+  .carousel-item img {
+    height: 100vh;
+  }
+  .carousel-caption figcaption h2 {
+    font-size: 6rem;
+  }
+
+  .carousel-caption figcaption h3 {
+    font-size: 3rem;
+  }
+
+  .learnmore-btn {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+  }
+  .carousel-caption {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+
+  .logo-box {
+    height: auto;
+    padding: 50px 0;
+  }
+  .logo-images img {
+    height: 10vh;
+  }
+
+  .photo img {
+    height: 50vh;
+    width: 100%;
+  }
+
+  /* banner */
+  .banner-inner {
+    padding: 10px 0;
+    font-size: 1.5rem;
+  }
+
+  /* St. Peter */
+  .fourth-page {
+    padding: 50px 0;
+  }
+
+  .st-peter h3 {
+    font-size: 1.8rem;
+  }
+
+  .st-peter ol {
+    height: 75vh;
+  }
+
+  .st-peter ol li {
+    font-size: 1.5rem;
+  }
+
+  .st-peter .st-peter-logo {
+    padding: 20px 0 40px 0;
+  }
+
+  .st-peter-logo img {
+    height: 20vh;
+  }
+
+  .st-peter .st-peter-ul-list p {
+    font-size: 1.5rem;
+  }
+
+  .st-peter-ul-list .outer {
+    font-size: 1.5rem;
+    height: 100vh;
+    padding: 0 35px;
+  }
+
+  /* PhilCare */
+  .philcare .philcare-logo {
+    padding: 20px 0 40px 0;
+  }
+
+  .philcare-logo img {
+    height: 20vh;
+    max-width: 100%;
+  }
+
+  .philcare-list {
+    padding: 30px 0;
+  }
+
+  .philcare-banner {
+    font-size: 1.5rem;
+  }
+
+  .philcare-text {
+    font-size: 1.3rem;
+  }
+
+  .philcare-text p {
+    font-size: 1.3rem;
+  }
+
+  .philcare-text small {
+    text-decoration: underline;
+    font-size: 1.3rem;
+  }
+
+  .philcare-text ol li {
+    margin-bottom: 10px;
+  }
+
+  .philcare-text .italic {
+    font-size: 1rem;
+  }
+
+  .philcare-text .important-notes {
+    font-size: 1.5rem;
+  }
+
+  .philcare-text .important-list {
+    font-size: 1.5rem;
+  }
+
+  .important-list p {
+    font-size: 1.5rem;
+  }
+
+  /* Standard Insurance */
+  .sixth-page {
+    background-size: contain;
+    padding: 25px 0;
+  }
+
+  .standard-insurance .standard-insurance-logo {
+    padding: 20px 0 40px 0;
+  }
+
+  .standard-insurance-logo img {
+    height: 20vh;
+    max-width: 100%;
+  }
+
+  .standard-insurance .standard-insurance-ul-list p {
+    font-size: 1.5rem;
+  }
+
+  /*table */
+  thead {
+    font-size: 1.3rem;
+  }
+
+  tr th {
+    width: 100vw;
+  }
+
+  td {
+    font-size: 1.3rem;
+  }
+
+  /* Standard Insurance */
+  .seventh-page {
+    background-size: cover;
+    height: 90vh;
+  }
+
+  .insure p {
+    font-size: 2.3rem;
+  }
+
+  .insure button {
+    font-size: 1.5rem;
+    padding: 15px 30px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    padding: 50px 0;
+    position: relative;
+  }
+
+  .footer-inner img {
+    height: 40vh;
+  }
+
+  .icon-links {
+    right: 0.5rem;
+    height: 35vh;
+  }
+
+  .fab,
+  .fas {
+    font-size: 1.5rem;
+  }
+
+  /* footer banner */
+  .footer-banner-inner {
+    font-size: 1rem;
+  }
+}
+
+/******* desktop ************/
+@media only screen and (min-width: 1200px) {
+  .nav-item {
+    margin: 0 20px;
+  }
+
+  .nav-item .nav-link {
+    padding: 5 10px;
+  }
+
+  .nav-item.active {
+    margin-bottom: 0;
+  }
+
+  .scroll_navbar {
+    /* box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4); */
+    transition-duration: 0.6s;
+    background-color: #4b5563 !important;
+  }
+
+  .carousel-item img {
+    height: 100vh;
+  }
+  .carousel-caption {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+  }
+  /* .logo-box {
+    height: 25vh;
+  }
+  .logo-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .logo-images img {
+    height: 10vh;
+  } */
+  .third-page {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-box .photo {
+    padding: 0 30px;
+  }
+  .img-box .photo img {
+    height: 50vh;
+    width: 100%;
+  }
+  .fourth-page {
+    height: 100vh;
+  }
+
+  /* banner */
+  .banner-inner {
+    padding: 10px 0;
+    font-size: 1.3rem;
+  }
+
+  /* St. Peter */
+  .fourth-page {
+    background-size: cover;
+    padding: 50px 0;
+  }
+
+  .st-peter ol {
+    height: 50vh;
+  }
+
+  .st-peter ol li {
+    font-size: 1.2rem;
+  }
+
+  .st-peter .st-peter-logo {
+    height: auto;
+    padding: 20px 0 40px 0;
+  }
+
+  .st-peter-logo img {
+    height: 15vh;
+    max-width: 100%;
+  }
+
+  .st-peter .st-peter-ul-list p {
+    font-size: 1.3rem;
+  }
+
+  .st-peter-ul-list .outer {
+    font-size: 1.2rem;
+    height: 90vh;
+    padding: 0 75px;
+  }
+
+  /* PhilCare */
+  .philcare .philcare-logo {
+    padding: 50px 0 50px 0;
+  }
+
+  .philcare-logo img {
+    height: 15vh;
+    max-width: 100%;
+  }
+
+  .philcare-list {
+    padding: 30px 0;
+  }
+
+  .philcare-banner {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+
+  .philcare-text {
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+
+  .philcare-text p {
+    font-size: 1.2rem;
+  }
+
+  .philcare-text small {
+    font-size: 1.2rem;
+  }
+
+  .philcare-text .italic {
+    font-size: 1rem;
+  }
+
+  /* Standard Insurance */
+  .sixth-page {
+    background-size: cover;
+    padding: 50px 0;
+  }
+
+  .standard-insurance .standard-insurance-logo {
+    padding: 20px 0 40px 0;
+  }
+
+  .standard-insurance-logo img {
+    height: 15vh;
+    max-width: 100%;
+  }
+
+  .standard-insurance .standard-insurance-ul-list p {
+    font-size: 1.3rem;
+  }
+
+  /*table */
+  table {
+    width: 100%;
+    height: auto;
+  }
+
+  .table-bordered {
+    border: 2px solid #f59e0b;
+  }
+
+  thead {
+    font-size: 1.3rem;
+  }
+
+  td {
+    font-size: 1.2rem;
+  }
+
+  /* Standard Insurance */
+  .seventh-page {
+    background-size: cover;
+    height: 90vh;
+  }
+
+  .insure p {
+    font-size: 3rem;
+  }
+
+  .insure button {
+    font-size: 1.8rem;
+    padding: 15px 40px;
+  }
+
+  /* Footer */
+  .footer-inner {
+    padding: 75px 0;
+  }
+
+  .footer-inner img {
+    height: 50vh;
+  }
+
+  .icon-links {
+    position: absolute;
+    right: 0;
+    height: 35vh;
+  }
+
+  .fab,
+  .fas {
+    font-size: 1.5rem;
+  }
+
+  /* footer banner */
+  .footer-banner-inner {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
 }

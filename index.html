@@ -1,102 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
     <!--AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="index_style.css" />
     <title>TLC</title>
   </head>
   <body>
-    <header class="navbar navbar-expand-lg navbar-light fixed-top px-lg-5">
-      <nav class="container-fluid nav d-flex justify-content-between p-0 m-0">
+    <header class="navbar navbar-expand-lg navbar-light fixed-top px-xl-5">
+      <div
+        class="container-fluid nav d-flex justify-content-between p-0 m-0 bg-transparent container-lg"
+      >
         <span class="logo">
-          <img src="/img/Logo TLC.PNG" alt="" class="img-fluid">
+          <img src="/img/Logo TLC.PNG" alt="" class="img-fluid" />
         </span>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fas fa-bars text-light"></i>
-        </button>
-      
-        <div class="collapse navbar-collapse justify-content-lg-end" id="navbarSupportedContent">
-          <ul class="navbar-nav p-4 text-dark">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Products</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Media</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Reach Us</a>
-            </li>
-            <form class="form-inline">
-              <button class="btn login-btn" type="submit">Login</button>
-            </form>
-          </ul>
-        </div>
-      </nav>
-      
+
+        <nav class="navy">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto py-4 py-lg-0">
+              <!--home-->
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <!--about us-->
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  About Us
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Our Story</a>
+                  <a class="dropdown-item" href="#">Mission and Vision</a>
+                  <a class="dropdown-item" href="#">Presidents Message</a>
+                  <a class="dropdown-item" href="#">Bussiness Registration</a>
+                  <a class="dropdown-item" href="#">Office</a>
+                </div>
+              </li>
+              <!--products-->
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Products
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">The Lean Coffee</a>
+                  <a class="dropdown-item" href="#">The Love of Collagen</a>
+                  <a class="dropdown-item" href="#">The Luxury Collections</a>
+                  <a class="dropdown-item" href="#">Pain Reliever Oil</a>
+                </div>
+              </li>
+              <!--services-->
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Services
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Standard Insurance</a>
+                  <a class="dropdown-item" href="#">PhilCare HMO</a>
+                  <a class="dropdown-item" href="#">St. Peter Life Plan</a>
+                </div>
+              </li>
+              <!--media-->
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Media
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Downloads</a>
+                  <a class="dropdown-item" href="#">Videos</a>
+                  <a class="dropdown-item" href="#">Photos</a>
+                </div>
+              </li>
+              <!--reach us-->
+              <li class="nav-item">
+                <a
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Reach Us
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Social Media Accounts</a>
+                  <a class="dropdown-item" href="#">Mobile Stockist</a>
+                  <a class="dropdown-item" href="#">Main Office</a>
+                </div>
+              </li>
+              <form class="form-inline">
+                <button class="btn login-btn" type="submit">Login</button>
+              </form>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section class="hero-page h-100">
-            <div class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/img/1.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption container">
-                            <figcaption>
-                                <h2>TRILIMCOR</h2>
-                                <h3>GROUP CORPORATION</h3>
-                                <a href="#" class="learnmore-btn">Learn More</a>
-                            </figcaption>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/2.jpg" class="d-block w-100" alt="...">
-                        <div class="carousel-caption container">
-                            <figcaption>
-                                <h2>INSURANCE</h2>
-                                <h3>DISTRIBUTOR</h3>
-                                <a href="#" class="learnmore-btn">Learn More</a>
-                            </figcaption>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/img/3.jpg" class="d-block w-100" alt="...">
-                    </div>
-                </div>
+      <section class="hero-page h-100">
+        <div class="carousel slide carousel-fade" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="/img/1.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption container">
+                <figcaption>
+                  <h2>TRILIMCOR</h2>
+                  <h3>GROUP CORPORATION</h3>
+                  <a href="#" class="learnmore-btn">Learn More</a>
+                </figcaption>
+              </div>
             </div>
-        </section>
+            <div class="carousel-item">
+              <img src="/img/2.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption container">
+                <figcaption>
+                  <h2>INSURANCE</h2>
+                  <h3>DISTRIBUTOR</h3>
+                  <a href="#" class="learnmore-btn">Learn More</a>
+                </figcaption>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/img/3.jpg" class="d-block w-100" alt="..." />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="second-page">
         <div class="container">
           <div data-aos="fade-up" class="row logo-box">
             <div class="col logo-images">
-              <img src="/img/logos/phil_life.png" alt="" class="img-fluid">
+              <img src="/img/logos/phil_life.png" alt="" class="img-fluid" />
             </div>
             <div class="col logo-images">
-              <img src="/img/logos/st.peter.png" alt="" class="img-fluid">
+              <img src="/img/logos/st.peter.png" alt="" class="img-fluid" />
             </div>
             <div class="col logo-images">
-              <img src="/img/logos/standard-insurance-logo.png" alt="" class="img-fluid">
+              <img
+                src="/img/logos/standard-insurance-logo.png"
+                alt=""
+                class="img-fluid"
+              />
             </div>
           </div>
         </div>
@@ -106,10 +215,10 @@
         <div class="container">
           <div data-aos="fade-up" class="row img-box">
             <div class="col photo">
-              <img src="/img/accident.jpg" alt="" class="img-fluid">
+              <img src="/img/accident.jpg" alt="" class="img-fluid" />
             </div>
             <div class="col photo">
-              <img src="/img/blocks.png" alt="" class="img-fluid">
+              <img src="/img/blocks.png" alt="" class="img-fluid" />
             </div>
           </div>
         </div>
@@ -117,33 +226,54 @@
 
       <section class="banner">
         <article class="container">
-          <div data-aos="fade-up" class="banner-inner">7 DAYS ACTIVATION UPON REGISTRATION</div>
+          <div data-aos="fade-up" class="banner-inner">
+            7 DAYS ACTIVATION UPON REGISTRATION
+          </div>
         </article>
       </section>
 
       <!----------ST PETER---------->
       <section class="fourth-page h-auto">
-        <article class="container d-flex align-items-center justify-content-center flex-column">
-
-          <div class="st-peter d-flex flex-column justify-content-lg-center align-items-lg-center">
+        <article
+          class="container d-flex align-items-center justify-content-center flex-column"
+        >
+          <div
+            class="st-peter d-flex flex-column justify-content-lg-center align-items-lg-center"
+          >
             <h3 data-aos="fade-up">6 MONTHS TO 64 YEARS OLD COVERAGE</h3>
             <ol>
-              <li data-aos="fade-up">Emergency Room Insurance under PhilCare - covered 50k, (good for 1 year)</li>
-              <li data-aos="fade-up">Saint Peter Memorial Plan (monthly payment could be in the form of repurchase)</li>
-              <li data-aos="fade-up">Accidental Life Insurance worth 100k (good for 1 year)</li>
+              <li data-aos="fade-up">
+                Emergency Room Insurance under PhilCare - covered 50k, (good for
+                1 year)
+              </li>
+              <li data-aos="fade-up">
+                Saint Peter Memorial Plan (monthly payment could be in the form
+                of repurchase)
+              </li>
+              <li data-aos="fade-up">
+                Accidental Life Insurance worth 100k (good for 1 year)
+              </li>
               <li data-aos="fade-up">1 Coffee sample product</li>
               <li data-aos="fade-up">TLC Shirt</li>
-              <li data-aos="fade-up">Online dashboard account (to monitor your personal, group sales and commisions)</li>
+              <li data-aos="fade-up">
+                Online dashboard account (to monitor your personal, group sales
+                and commisions)
+              </li>
             </ol>
           </div>
 
-          <div class="st-peter d-flex flex-column justify-content-lg-center align-items-lg-center">
+          <div
+            class="st-peter d-flex flex-column justify-content-lg-center align-items-lg-center"
+          >
             <div data-aos="fade-up" class="st-peter-logo">
-              <img src="/img/logos/st.peter.png" alt="st_peter_logo">
+              <img src="/img/logos/st.peter.png" alt="st_peter_logo" />
             </div>
 
             <div class="st-peter-ul-list">
-              <p data-aos="fade-up">All Traditional Life Plans includes: (St. George) Viewing Arrangements</p>
+              <p data-aos="fade-up">
+                All Traditional Life Plans includes: (St. George) Viewing
+                Arrangements
+              </p>
               <ul class="outer">
                 <li data-aos="fade-up">Pick up from location</li>
                 <li data-aos="fade-up">Fixing of remains</li>
@@ -154,98 +284,189 @@
                 <li data-aos="fade-up">Background Curtain</li>
                 <li data-aos="fade-up">Lighting Effects</li>
                 <li data-aos="fade-up">Flower Arrangements</li>
-                <li data-aos="fade-up">Chapel 5 days / Residence / Outside viewing 9 days</li>
+                <li data-aos="fade-up">
+                  Chapel 5 days / Residence / Outside viewing 9 days
+                </li>
                 <ul class="inner">
                   <li data-aos="fade-up">includes deathcert processing</li>
-                  <li data-aos="fade-up">burial permit processing hassle free service.</li>
+                  <li data-aos="fade-up">
+                    burial permit processing hassle free service.
+                  </li>
                 </ul>
               </ul>
             </div>
           </div>
-
         </article>
       </section>
 
-                <!----------PHILCARE---------->
+      <!----------PHILCARE---------->
       <section class="fifth-page h-auto">
-        <article class="d-flex align-items-center justify-content-center flex-lg-column">
-
-            <div class="philcare ">
-                  <!--logo-->
-                  <div class="philcare-logo">
-                        <img data-aos="fade-up" src="/img/logos/phil_life.png" alt="philcare_logo">
-                  </div>
-                  <!--card-->
-                  <div class="container philcare-card">
-                        <img data-aos="fade-up" src="/img/philcare_card.jpg" alt="philcare_Card" class="img-fluid">
-                  </div>
-
-                  <div class="philcare-list">
-                        <!--1-->
-                        <div class="philcare-banner">
-                              <div data-aos="fade-up" class="container">AGE ELIGIBILITY AND VALIDITY</div>
-                        </div>
-
-                        <div class="philcare-text">
-                              <div data-aos="fade-up" class="container">
-                                    <strong>ER Shield</strong> is for <strong>age 6 months to 64 years old</strong> and is valid for 1 year upon activation date. Benefit starts 7 days after activation date. The voucher is non-transferable once activated.
-                              </div>
-                        </div>
-
-                        <!--2-->
-                        <br>
-                        <div class="philcare-banner">
-                              <div data-aos="fade-up" class="container">BENEFIT COVERAGE</div>
-                        </div>
-
-                        <div class="philcare-text">
-                              <div data-aos="fade-up" class="container">
-                                    <p data-aos="fade-up">Outpatient Emergency Care</p>
-                                    <strong>ER Shield*</strong> gives you coverage up to P50,000 emergency room care expense, inclusive of doctors' fees, laboratory and diagnostic procedures, and medicines (as medically necessary and excluding vaccines)* In more than 500 accredited hospitals nationwide <small>excluding</small> six (6) major hospitals in Metro Manila (Makati Medical Center, St. Luke's Medical Center (QC and Global), Asian Hospital and Medical Center. The Medical City, and Cardinal Santos Medical Center ). The Coverage is inclusive of the following benefits:
-                                    <ul>
-                                          <li data-aos="fade-up">Special modalities of treatment as medically necessary during ER and confinement, subject to P5,000 inner limits</li>
-                                          <li data-aos="fade-up">Diagnostic and therapeutic procedures as medically necessary during ER and confinement</li>
-                                          <li data-aos="fade-up">Hospital emergency care for animal bites except vaccines</li>
-                                    </ul>
-                                    <p data-aos="fade-up" class="font-italic italic">Emergency cases are the sudden, unexpected onset of illness or injury, which at the time of contract reasonably appeared as having the potential of causing immediate disability of death or requiring the immediate alleviation of severe pain and discomfort. Emergency cases include but are not limited to the following: (a) Massive Bleeding: (b) Acute Appendicitis; (c) Fractures/multiple injuries secondary to accidents; (d) Convulsions; (i) illness or conditions resulting in moderate or severe dehydration such as diarrhea or fever; and (e) Syncope. Pre-existing conditions and those conditions under the general exclusions of PhilCare are not covered. ***</p>
-                              </div>
-                        </div>
-
-                        <!--3-->
-                        <div class="philcare-banner">
-                              <div data-aos="fade-up" class="container">AVAILMENT PROCEDURE</div>
-                        </div>
-
-                        <div class="philcare-text">
-                              <div class="container">
-                                    <p data-aos="fade-up">Emergency and Hospitalization Availment</p>
-                                    <ol>
-                                          <li data-aos="fade-up">Simply present this voucher together with a valid identification to the emergency room personnel at the identified PhilCare-accredited hospital.</li>
-                                          <li data-aos="fade-up">ER personnel will facilitate the approval of your availment thru reaching our contact center to verify your membership eligibility and health coverage. The final medical diagnosis is the basis for PhilCare's approval of coverage.</li>
-                                          <li data-aos="fade-up">Once approval has been provided, request for cancellation of approval to reactivate membership is not allowed.</li>
-                                    </ol>
-                                    <p data-aos="fade-up" class="important-notes">IMPORTANT NOTES</p>
-                                    <div class="important-list">
-                                          <p data-aos="fade-up">*<small class="important-list-highlight">Terms and conditions</small> apply</p>
-                                          <p data-aos="fade-up">** See <small class="important-list-highlight">FAQs</small> for more details.</p>
-                                          <p data-aos="fade-up">*** Check the list of <small class="important-list-highlight">non-covered illnesses and disease.</small></p>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-
+        <article
+          class="d-flex align-items-center justify-content-center flex-lg-column"
+        >
+          <div class="philcare">
+            <!--logo-->
+            <div class="philcare-logo">
+              <img
+                data-aos="fade-up"
+                src="/img/logos/phil_life.png"
+                alt="philcare_logo"
+              />
+            </div>
+            <!--card-->
+            <div class="container philcare-card">
+              <img
+                data-aos="fade-up"
+                src="/img/philcare_card.jpg"
+                alt="philcare_Card"
+                class="img-fluid"
+              />
             </div>
 
+            <div class="philcare-list">
+              <!--1-->
+              <div class="philcare-banner">
+                <div data-aos="fade-up" class="container">
+                  AGE ELIGIBILITY AND VALIDITY
+                </div>
+              </div>
+
+              <div class="philcare-text">
+                <div data-aos="fade-up" class="container">
+                  <strong>ER Shield</strong>
+                  is for
+                  <strong>age 6 months to 64 years old</strong>
+                  and is valid for 1 year upon activation date. Benefit starts 7
+                  days after activation date. The voucher is non-transferable
+                  once activated.
+                </div>
+              </div>
+
+              <!--2-->
+              <br />
+              <div class="philcare-banner">
+                <div data-aos="fade-up" class="container">BENEFIT COVERAGE</div>
+              </div>
+
+              <div class="philcare-text">
+                <div data-aos="fade-up" class="container">
+                  <p data-aos="fade-up">Outpatient Emergency Care</p>
+                  <strong>ER Shield*</strong>
+                  gives you coverage up to P50,000 emergency room care expense,
+                  inclusive of doctors' fees, laboratory and diagnostic
+                  procedures, and medicines (as medically necessary and
+                  excluding vaccines)* In more than 500 accredited hospitals
+                  nationwide
+                  <small>excluding</small>
+                  six (6) major hospitals in Metro Manila (Makati Medical
+                  Center, St. Luke's Medical Center (QC and Global), Asian
+                  Hospital and Medical Center. The Medical City, and Cardinal
+                  Santos Medical Center ). The Coverage is inclusive of the
+                  following benefits:
+                  <ul>
+                    <li data-aos="fade-up">
+                      Special modalities of treatment as medically necessary
+                      during ER and confinement, subject to P5,000 inner limits
+                    </li>
+                    <li data-aos="fade-up">
+                      Diagnostic and therapeutic procedures as medically
+                      necessary during ER and confinement
+                    </li>
+                    <li data-aos="fade-up">
+                      Hospital emergency care for animal bites except vaccines
+                    </li>
+                  </ul>
+                  <p data-aos="fade-up" class="font-italic italic">
+                    Emergency cases are the sudden, unexpected onset of illness
+                    or injury, which at the time of contract reasonably appeared
+                    as having the potential of causing immediate disability of
+                    death or requiring the immediate alleviation of severe pain
+                    and discomfort. Emergency cases include but are not limited
+                    to the following: (a) Massive Bleeding: (b) Acute
+                    Appendicitis; (c) Fractures/multiple injuries secondary to
+                    accidents; (d) Convulsions; (i) illness or conditions
+                    resulting in moderate or severe dehydration such as diarrhea
+                    or fever; and (e) Syncope. Pre-existing conditions and those
+                    conditions under the general exclusions of PhilCare are not
+                    covered. ***
+                  </p>
+                </div>
+              </div>
+
+              <!--3-->
+              <div class="philcare-banner">
+                <div data-aos="fade-up" class="container">
+                  AVAILMENT PROCEDURE
+                </div>
+              </div>
+
+              <div class="philcare-text">
+                <div class="container">
+                  <p data-aos="fade-up">
+                    Emergency and Hospitalization Availment
+                  </p>
+                  <ol>
+                    <li data-aos="fade-up">
+                      Simply present this voucher together with a valid
+                      identification to the emergency room personnel at the
+                      identified PhilCare-accredited hospital.
+                    </li>
+                    <li data-aos="fade-up">
+                      ER personnel will facilitate the approval of your
+                      availment thru reaching our contact center to verify your
+                      membership eligibility and health coverage. The final
+                      medical diagnosis is the basis for PhilCare's approval of
+                      coverage.
+                    </li>
+                    <li data-aos="fade-up">
+                      Once approval has been provided, request for cancellation
+                      of approval to reactivate membership is not allowed.
+                    </li>
+                  </ol>
+                  <p data-aos="fade-up" class="important-notes">
+                    IMPORTANT NOTES
+                  </p>
+                  <div class="important-list">
+                    <p data-aos="fade-up">
+                      *
+                      <small class="important-list-highlight">
+                        Terms and conditions
+                      </small>
+                      apply
+                    </p>
+                    <p data-aos="fade-up">
+                      ** See
+                      <small class="important-list-highlight">FAQs</small>
+                      for more details.
+                    </p>
+                    <p data-aos="fade-up">
+                      *** Check the list of
+                      <small class="important-list-highlight">
+                        non-covered illnesses and disease.
+                      </small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
       </section>
 
-          <!----------STANDARD INSURANCE---------->
+      <!----------STANDARD INSURANCE---------->
       <section class="sixth-page h-auto">
-        <article class="container d-flex align-items-center justify-content-center flex-lg-column">
-
-          <div class="standard-insurance d-flex flex-column justify-content-lg-center align-items-lg-center">
+        <article
+          class="container d-flex align-items-center justify-content-center flex-lg-column"
+        >
+          <div
+            class="standard-insurance d-flex flex-column justify-content-lg-center align-items-lg-center"
+          >
             <div class="standard-insurance-logo">
-              <img data-aos="fade-up" src="/img/logos/standard-insurance-logo.png" alt="standard-insurance_logo">
+              <img
+                data-aos="fade-up"
+                src="/img/logos/standard-insurance-logo.png"
+                alt="standard-insurance_logo"
+              />
             </div>
 
             <div class="standard-insurance-ul-list text-center">
@@ -253,49 +474,58 @@
 
               <div class="container">
                 <table data-aos="fade-up" class="table table-bordered">
-                    <thead class="">
-                        <tr class="my-auto">
-                            <th>INSURANCE BENEFITS(100K COVERAGE)</th>
-                            <th>PRIMARY</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="m-0">
-                            <td>Accidental Death/Permanent Total Disablement</td>
-                            <td>P 100,000.00</td>
-                        </tr>
-                        <tr class="m-0">
-                          <td>Unprovoked Murder & Assault</td>
-                          <td>P 50,000.00</td>
-                        </tr>
-                        <tr class="m-0">
-                          <td>Medical Reimbursement due to Non-motorcycling Risk</td>
-                          <td>P 10,000.00</td>
-                        </tr>
-                        <tr class="m-0">
-                          <td>Medical Reimbursement due to Motorcycling Risk</td>
-                          <td>P 10,000.00</td>
-                        </tr>
-                        <tr class="m-0">
-                          <td>Burial Expense Benefit</td>
-                          <td>P 10,000.00</td>
-                        </tr>
-                    </tbody>
+                  <thead class="">
+                    <tr class="my-auto">
+                      <th>INSURANCE BENEFITS(100K COVERAGE)</th>
+                      <th>PRIMARY</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="m-0">
+                      <td>Accidental Death/Permanent Total Disablement</td>
+                      <td>P 100,000.00</td>
+                    </tr>
+                    <tr class="m-0">
+                      <td>Unprovoked Murder & Assault</td>
+                      <td>P 50,000.00</td>
+                    </tr>
+                    <tr class="m-0">
+                      <td>
+                        Medical Reimbursement due to Non-motorcycling Risk
+                      </td>
+                      <td>P 10,000.00</td>
+                    </tr>
+                    <tr class="m-0">
+                      <td>Medical Reimbursement due to Motorcycling Risk</td>
+                      <td>P 10,000.00</td>
+                    </tr>
+                    <tr class="m-0">
+                      <td>Burial Expense Benefit</td>
+                      <td>P 10,000.00</td>
+                    </tr>
+                  </tbody>
                 </table>
-            </div>
-
+              </div>
             </div>
           </div>
-
         </article>
       </section>
 
       <!----------INSURE NOW---------->
       <section class="seventh-page">
-        <div class="for-overlay d-flex align-items-center justify-content-center flex-column"></div>
+        <div
+          class="for-overlay d-flex align-items-center justify-content-center flex-column"
+        ></div>
         <article class="container for-overlay-up">
           <div class="d-flex flex-column insure">
-            <p data-aos="fade-up">365 days <small>We</small> will keep <small>YOU</small> and your <small>FAMILY PROTECTED</small></p>
+            <p data-aos="fade-up">
+              365 days
+              <small>We</small>
+              will keep
+              <small>YOU</small>
+              and your
+              <small>FAMILY PROTECTED</small>
+            </p>
             <button data-aos="fade-up">Insure Now!</button>
           </div>
         </article>
@@ -305,11 +535,28 @@
       <footer class="footer">
         <article class="container">
           <div class="footer-inner">
-            <img data-aos="fade-up" src="/img/Logo TLC.PNG" alt="tlc_logo" class="img-fluid">
+            <img
+              data-aos="fade-up"
+              src="/img/Logo TLC.PNG"
+              alt="tlc_logo"
+              class="img-fluid"
+            />
             <div data-aos="fade-up" class="icon-links">
-              <a target="_blank" href="https://www.facebook.com/tlccaresofficial/"><i class="fab fa-facebook-f"></i></a>
-              <a target="_blank" href="https://twitter.com/TLCofficial001"><i class="fab fa-twitter"></i></a>
-              <a target="_blank" href="https://www.instagram.com/tlc_official001/"><i class="fab fa-instagram"></i></a>
+              <a
+                target="_blank"
+                href="https://www.facebook.com/tlccaresofficial/"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a target="_blank" href="https://twitter.com/TLCofficial001">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/tlc_official001/"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
             </div>
           </div>
         </article>
@@ -317,28 +564,34 @@
 
       <section class="footer-banner">
         <article class="container">
-          <div  class="footer-banner-inner">
-              Copyright 2022 ©️ Trilimcor Group Corporation
+          <div class="footer-banner-inner">
+            Copyright 2022 ©️ Trilimcor Group Corporation
           </div>
         </article>
       </section>
-
     </main>
 
     <script>
-      AOS.init();
+      AOS.init()
     </script>
 
-
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"> </script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> -->
-    
+
     <script src="js/app.js"></script>
   </body>
 </html>
